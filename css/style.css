@@ -1,0 +1,71 @@
+/* Your styles go here — you will start filling this in during Lesson 2.2 (CSS week). */
+:root {
+  --accent: #73a19b;
+  --bg:#242020;
+  --text: #73a19b;
+}
+body {
+  font-family: "Cherry Bomb One";
+  background-color: #d8e7e5;
+  color: #73a19b;
+}
+.cherry-bomb-one-regular {
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+h1 {
+  color:#73a19b;
+  font: size 28px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  background-color: #67a096;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+
+nav a:hover {
+  color:#73a19b;
+  background-color:#d3eeee;
+}
+
+img {
+  max-width: 200px;
+  border-radius: 50%;
+  border: 4px solid #0a0a0a;
+}
+
+img {
+  max-width: 200px;
+  border-radius: 50%;
+  border: 4px solid #54928d;
+}
+
+p {
+  padding:0px;
+  line: height 1.3em;;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+body:has(#dark-mode-toggle:checked) {
+  background-color: var(--bg);
+  color: var(--text);
+}
+ 
+ 
