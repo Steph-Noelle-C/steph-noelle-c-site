@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <input type="checkbox" id="dark-mode-toggle">
-<label for="dark-mode-toggle">🌙 Dark mode</label>
-
 <head>
   <meta charset="UTF-8">
+  <!-- FIX: added a viewport meta tag so the page scales correctly on phones. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
-  <title>My work — Stephanie Noelleᶻ 𝗓 𐰁 .ᐟ</title>
+  <title>My work — Stephanie Noelle ᶻ 𝗓 𐰁 .ᐟ</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+  <!-- FIX: the dark-mode checkbox and label were placed BEFORE <head>, which is invalid HTML.
+       They are now inside <body>. -->
+  <input type="checkbox" id="dark-mode-toggle">
+  <label for="dark-mode-toggle">🌙 Dark mode</label>
 
   <header>
-      <h1>Stephanie Noelle ᶻ 𝗓 𐰁 .ᐟ</h1>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
-  <a href="work.html">My Work</a>
-</nav>
+    <h1>Stephanie Noelle ᶻ 𝗓 𐰁 .ᐟ</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="work.html">My Work</a>
+    </nav>
   </header>
 
   <main>
-  <h1>My Work ˚ ༘ ೀ⋆｡˚ </h1>
+    <h1>My Work ˚ ༘ ೀ⋆｡˚ </h1>
 
-  <p>⋆˚🐾˖°Coming soon — here's what I'm hoping to build this year:</p>
+    <p>⋆˚🐾˖°Coming soon — here's what I'm hoping to build this year:</p>
+
+    <!-- FIX: the list was outside <main> and after it closed. It is now inside <main>, so it is part of the page content. -->
+    <ul>
+      <li>Create a video game</li>
+      <li>Create another website</li>
+      <li>Some otheer codes</li>
+    </ul>
   </main>
-  <ul>
-    <li>Create a video game</li>
-    <li>Create another website</li>
-    <li>Some otheer codes</li>
-</ul>
+
+  <!-- FIX: the footer was placed AFTER </body>. It is now inside <body>. -->
+  <footer><p>ʚ ˚𝄞.&copy; 2026 Stephanie Noelle ɞ</p></footer>
 </body>
 </html>
-<footer><p>ʚ ˚𝄞.&copy; 2026 Stephanie Noelle ɞ</p></footer>

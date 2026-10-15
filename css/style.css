@@ -1,24 +1,30 @@
 /* Your styles go here — you will start filling this in during Lesson 2.2 (CSS week). */
+
+/* Colour variables. Change a colour here and it updates everywhere it is used. */
 :root {
   --accent: #73a19b;
-  --bg:#242020;
-  --text: #73a19b;
+  --bg: #242020;   /* dark-mode background */
+  --text: #73a19b; /* dark-mode text */
 }
+
 body {
-  font-family: "Cherry Bomb One";
+  /* FIX: added a fallback font (sans-serif) in case Cherry Bomb One does not load. */
+  font-family: "Cherry Bomb One", sans-serif;
   background-color: #d8e7e5;
   color: #73a19b;
 }
+
 .cherry-bomb-one-regular {
   font-family: "Cherry Bomb One", system-ui;
   font-weight: 200;
   font-style: normal;
 }
 
-
 h1 {
-  color:#73a19b;
-  font: size 28px;
+  color: #73a19b;
+  /* FIX: was "font: size 28px;", which is not valid CSS, so the browser ignored it.
+     The correct property is "font-size". */
+  font-size: 28px;
 }
 
 nav {
@@ -34,18 +40,14 @@ nav a {
   font-weight: bold;
 }
 
-
 nav a:hover {
-  color:#73a19b;
-  background-color:#d3eeee;
+  color: #73a19b;
+  background-color: #d3eeee;
 }
 
-img {
-  max-width: 200px;
-  border-radius: 50%;
-  border: 4px solid #0a0a0a;
-}
-
+/* FIX: there were two "img" rules. The first set a black border and the second
+   overwrote its border colour, so the first rule did nothing. They are merged into one rule
+   that keeps the effective values (the teal border from the second rule). */
 img {
   max-width: 200px;
   border-radius: 50%;
@@ -53,8 +55,10 @@ img {
 }
 
 p {
-  padding:0px;
-  line: height 1.3em;;
+  padding: 0px;
+  /* FIX: was "line: height 1.3em;;", which is not valid CSS. The correct property is "line-height",
+     and the stray double semicolon was removed. */
+  line-height: 1.3em;
 }
 
 main {
@@ -63,9 +67,8 @@ main {
   padding: 20px;
 }
 
+/* Dark mode: when the #dark-mode-toggle checkbox is ticked, switch the body colours. */
 body:has(#dark-mode-toggle:checked) {
   background-color: var(--bg);
   color: var(--text);
 }
- 
- 
